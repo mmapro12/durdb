@@ -1,0 +1,38 @@
+# Turkman debian install system
+[package]
+name = "turkman"
+author = "mmapro12"
+version = "v0.3.5"
+base = "github"
+source = "https://github.com/turkman/turkman.git"
+deb_source = "https://github.com/mmapro12/turkman/releases/latest/download/turkman_0.6.5_all.deb"
+need_source = false
+install_type = "deb"
+help_command = "turkman --help"
+help_page = "https://github.com/turkman/turkman/issues"
+
+[dependencies]
+system = ["python3-typer", "python3-requests", "manpages-tr"]
+dur = []  # dur ile kurulu diğer paketler
+
+[scripts]
+install = """
+"""
+
+config = """
+turkman db sync
+"""
+
+remove = """
+turkman uninstall
+"""
+
+update = """
+turkman update
+"""
+
+[metadata]
+description = "Turkman package manager"
+long_description = "man turkman"
+maintainer = "maintainer@example.com"
+tags = ["development", "package-manager"]
