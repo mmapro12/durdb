@@ -1,0 +1,38 @@
+[package]
+name = "anitr-cli"
+author = "xeyessor"
+version = "3.5.1"
+base = "github"
+source = "https://github.com/xeyossr/anitr-cli.git"
+need_source = false
+install_type = "script"
+help_command = "anitr-cli --help"
+help_page = "https://github.com/xeyossr/anitr-cli/issues"
+
+[dependencies]
+system = []
+dur = []
+setup = """"""
+
+[scripts]
+install = """
+curl -L -o /tmp/anitr-cli https://github.com/xeyossr/anitr-cli/releases/latest/download/anitr-cli
+chmod +x /tmp/anitr-cli
+sudo mv /tmp/anitr-cli /usr/bin/anitr-cli
+"""
+
+config = """"""
+
+remove = """
+sudo rm -rf /usr/bin/anitr-cli
+"""
+
+update = """
+anitr-cli --update
+"""
+
+[metadata]
+description = "Watch anime from terminal"
+long_description = ""
+maintainer = ""
+tags = ["turkish", "anime", "cli"]
